@@ -355,7 +355,7 @@ function getLocation() {
 
 function findTacos(userLatitude, userLongitude) {
   $.ajax({
-    url: 'https://quiet-hamlet-95434.herokuapp.com/tacos?latitude=' + userLatitude + '&longitude=' + userLongitude,
+    url: 'https://tacocompass.herokuapp.com/tacos?latitude=' + userLatitude + '&longitude=' + userLongitude,
     type: "GET",
     success: function(body) {
       var body = $.parseJSON(body)

@@ -29,7 +29,7 @@ app.get('/tacos', function(req, res) {
         console.log(response.statusCode);
       }
     })
-    .auth(false, false, true, process.env.bfYhWezjH9V14BS1OyPqGKt_h-ofi9bc_PH4PMPCSH1nwSr_AlW583nJuPGNPhq2wQoHpWqbsR7HrSM1iihyuh57XUKzTFqH0w6Dg_eSlDpRYxBph79Z8e8QEJVEWHYx)
+    .auth(false, false, true, process.env.YELP_BEARER_TOKEN)
 });
 
 app.listen(process.env.PORT || 5000)
