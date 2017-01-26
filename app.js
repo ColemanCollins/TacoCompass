@@ -5,6 +5,10 @@ var request = require('request');
 
 var app = express();
 
+app.get('/', function(req, res) {
+  res.sendFile('index.html');
+});
+
 app.get('/tacos', function(req, res) {
   console.log('getting tacos');
   var latitude = req.query.latitude
@@ -21,10 +25,11 @@ app.get('/tacos', function(req, res) {
         console.log(body);
       } else {
         res.status(502).send('yelp is mad at you')
-        console.log('yelp is mad at you');
+        console.log(error);
+        console.log(response.statusCode);
       }
     })
-    .auth(false, false, true, process.env.YELP_BEARER_TOKEN)
+    .auth(false, false, true, process.env.bfYhWezjH9V14BS1OyPqGKt_h-ofi9bc_PH4PMPCSH1nwSr_AlW583nJuPGNPhq2wQoHpWqbsR7HrSM1iihyuh57XUKzTFqH0w6Dg_eSlDpRYxBph79Z8e8QEJVEWHYx)
 });
 
 app.listen(process.env.PORT || 5000)
