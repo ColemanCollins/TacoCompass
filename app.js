@@ -6,7 +6,7 @@ var request = require('request');
 var app = express();
 
 app.get('/', function(req, res) {
-  res.sendFile('index.html');
+  res.sendFile('/index.html');
 });
 
 app.get('/tacos', function(req, res) {
